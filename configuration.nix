@@ -35,6 +35,7 @@
     extraGroups = [ "wheel" "networkmanager" ];
     packages = with pkgs; [
       git
+      gh
       wget
       curl
     ];
