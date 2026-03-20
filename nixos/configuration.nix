@@ -21,6 +21,8 @@
 
   services.upower.enable = true;
 
+  hardware.bluetooth.enable = true;
+
   services.openssh.enable = true;
 
   programs.ambxst.enable = true;
