@@ -9,7 +9,6 @@
     ./hardware-configuration.nix
     ./bootloader.nix
     ./networking.nix
-    ./hyprland.nix
     ./users.nix
   ];
 
@@ -17,7 +16,16 @@
 
   time.timeZone = "Asia/Kolkata";
 
+  hardware.graphics.enable = true;
+
+  security.polkit.enable = true;
+
+  services.upower.enable = true;
+
   services.openssh.enable = true;
+
+  programs.ambxst.enable = true;
+  programs.hyprland.enable = true;
 
   system.stateVersion = "25.11";
 }
