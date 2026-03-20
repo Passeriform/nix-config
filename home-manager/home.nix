@@ -56,8 +56,6 @@
     };
   };
 
-  programs.kitty.enable = true;
-
   programs.zen-browser = {
     enable = true;
     setAsDefaultBrowser = true;

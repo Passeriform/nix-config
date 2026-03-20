@@ -9,14 +9,13 @@
     ./hardware-configuration.nix
     ./bootloader.nix
     ./networking.nix
+    ./graphics.nix
     ./users.nix
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
+ 
   time.timeZone = "Asia/Kolkata";
-
-  hardware.graphics.enable = true;
 
   security.polkit.enable = true;
 
