@@ -87,7 +87,7 @@
     "${cfg.mod}, COMMA, exec, ambxst run config"
     "${cfg.mod} ALT, COMMA, exec, ambxst run wallpapers"
 
-    "${cfg.mod}, L, exec, loginctl lock-session"
+    "${cfg.mod}, L, exec, ambxst lock"
     "${cfg.mod}, ESCAPE, exec, ambxst run powermenu"
   ];
 
