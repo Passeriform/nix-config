@@ -182,6 +182,11 @@
     theme = spicePkgs.themes.hazy;
   };
 
+  services.gnome-keyring = {
+    enable = true;
+    components = [ "pkcs11" "secrets" "ssh" ];
+  };
+
   shell.hypr-ambxst.enable = true;
   shell.hypr-ambxst.terminal = "foot";
   shell.hypr-ambxst.file-manager = "foot -e yazi";
