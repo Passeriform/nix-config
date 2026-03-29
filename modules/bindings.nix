@@ -75,10 +75,10 @@
     "${cfg.mod}, V, exec, ambxst run clipboard"
     "${cfg.mod}, TAB, exec, ambxst run overview"
     "${cfg.mod}, SLASH, exec, ambxst run assistant"
-    "${cfg.mod}, QUOTES, exec, ambxst run notes"
+    "${cfg.mod}, APOSTROPHE, exec, ambxst run notes"
 
     "${cfg.mod}, PERIOD, exec, ambxst run emoji"
-    "${cfg.mod}, COLON, exec, ambxst run tools"
+    "${cfg.mod}, SEMICOLON, exec, ambxst run tools"
 
     "${cfg.mod}, PRINT, exec, ambxst run screenshot"
     "${cfg.mod} SHIFT, PRINT, exec, ambxst run screenrecord"
