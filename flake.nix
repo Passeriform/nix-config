@@ -44,7 +44,10 @@
   } @ inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
+      specialArgs = {
+        inherit inputs;
+        username = "utkarsh";
+      };
       modules = [
         nixos-hardware.nixosModules.asus-rog-strix-g713ie
         ./configuration
@@ -55,7 +58,7 @@
             inherit inputs;
             username = "utkarsh";
           };
-          home-manager.users.utkarsh = import ./hm;
+          home-manager.users.utkarsh = import ./home-manager;
         }
       ];
     };

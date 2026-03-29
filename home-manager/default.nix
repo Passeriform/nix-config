@@ -3,8 +3,10 @@
   ...
 }: {
   imports = [
-    ./packages.nix
+    ./packages
+    ./session.nix
     ./fonts.nix
+    ./utils.nix
   ];
 
   home = {
