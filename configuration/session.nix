@@ -1,11 +1,14 @@
 {
   lib,
   pkgs,
+  inputs,
   ...
-}: {
-  environment.systemPackages = [
-    pkgs.hyprpolkitagent
-    pkgs.where-is-my-sddm-theme
+}: let
+  sddm-theme = inputs.catppuccin-where-is-my-sddm-theme.packages.${pkgs.stdenv.hostPlatform.system}.default;
+in {
+  environment.systemPackages = with pkgs; [
+    hyprpolkitagent
+    (sddm-theme.override { flavor = "mocha"; })
   ];
 
   security.polkit.enable = true;
@@ -14,7 +17,10 @@
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
-    theme = "where-is-my-sddm-theme";
+    theme = "where_is_my_sddm_theme";
+    extraPackages = with pkgs; [
+      kdePackages.qt5compat
+    ];
     enableHidpi = true;
   };
 }

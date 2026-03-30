@@ -9,21 +9,9 @@ Fix discord background noise issue
 
 Fix bluetooth issue with headphones
 
-Sleep not working
-
-discord
-
-unified colors
-
-spotify
-
-Check all widgets in Ambxst work
-
-Keybinds
+Sleep not working / Fix hibernation on closing lid
 
 keyboard backlight
-
-Inverted scroll
 
 Add DevShell support
 
@@ -31,12 +19,10 @@ Autologin
 
 Change cursor
 
-Use stylix
+Use stylix for unified theming
 
 Setup stremio and ModernZ with mpv
 
 Update neofetch to use image instead of ascii
-
-Fix hibernation on closing lid
 
 Implement custom login greeter to work with Ambxst (greetd + hyprlock)

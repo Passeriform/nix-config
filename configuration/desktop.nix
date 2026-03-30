@@ -6,6 +6,7 @@
 }: {
   environment.sessionVariables = {
     _PR_SHELL = "/bin/zsh";
+    NIXOS_OZONE_WL = "1";
   };
 
   programs.bash.enable = false;

@@ -14,6 +14,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    catppuccin-where-is-my-sddm-theme = {
+      url = "github:catppuccin/where-is-my-sddm-theme";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     ambxst = {
       url = "github:Axenide/Ambxst";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -37,6 +42,7 @@
     nixos-hardware,
     home-manager,
     nix-index-database,
+    catppuccin-where-is-my-sddm-theme,
     ambxst,
     zen-browser,
     spicetify-nix,
