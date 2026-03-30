@@ -14,6 +14,7 @@ in {
   security.polkit.enable = true;
   security.pam.services.sddm.enableGnomeKeyring = true;
 
+  services.gnome.gnome-keyring.enable = true;
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
