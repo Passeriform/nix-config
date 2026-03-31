@@ -3,12 +3,8 @@
   ...
 }: {
   imports = [
+    ./gtk.nix
     ./bindings.nix
-  ];
-
-  home.packages = with pkgs; [
-    gsettings-desktop-schemas
-    dconf
   ];
 
   programs.quickshell = {
