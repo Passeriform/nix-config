@@ -7,6 +7,10 @@ Stream any running video to active console window
 
 Fix discord background noise issue
 
+Fix vencord crashing vesktop
+
+Remove regular discord entry from run and rename/re-icon vesktop as discord
+
 Fix bluetooth issue with headphones
 
 Sleep not working / Fix hibernation on closing lid

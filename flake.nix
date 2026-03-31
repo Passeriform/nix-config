@@ -5,7 +5,7 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.11";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -32,6 +32,11 @@
       };
     };
 
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions"; 
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
     nixcord.url = "github:FlameFlag/nixcord";
 
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
@@ -41,11 +46,7 @@
     nixpkgs,
     nixos-hardware,
     home-manager,
-    nix-index-database,
-    catppuccin-where-is-my-sddm-theme,
     ambxst,
-    zen-browser,
-    spicetify-nix,
     ...
   } @ inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
