@@ -41,6 +41,8 @@
           "editor.fontLigatures" = true;
           "editor.inlayHints.fontFamily" = "'Iosevka Nerd Font', 'FiraCode Nerd Font'";
           "editor.inlineSuggest.fontFamily" = "'Iosevka Nerd Font', 'FiraCode Nerd Font'";
+          "git.autoFetch" = true;
+          "git.confirmSync" = false;
           "markdown.preview.fontFamily" = "'Iosevka Nerd Font', 'FiraCode Nerd Font'";
           "notebook.markup.fontFamily" = "'Iosevka Nerd Font', 'FiraCode Nerd Font'";
           "notebook.output.fontFamily" = "'Iosevka Nerd Font', 'FiraCode Nerd Font'";
