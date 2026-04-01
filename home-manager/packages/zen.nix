@@ -19,6 +19,14 @@
         isDefault = true;
         settings = {
           "extensions.autoDisableScopes" = 0;
+          "zen.view.compact.enable-at-startup" = true;
+          "zen.view.experimental-no-window-controls" = true;
+          "zen.welcome-screen.seen" = true;
+          "zen.workspaces.continue-where-left-off" = true;
+          "zen.view.show-newtab-button-top" = false;
+          "zen.tabs.show-newtab-vertical" = false;
+          "zen.theme.color-prefs.amoled" = true;
+          "zen.theme.color-prefs.use-workspace-colors" = true;
         };
 
         bookmarks = {

@@ -63,6 +63,7 @@
       "SUPER, Return, exec, foot"
       "SUPER, W, exec, zen-beta"
       "SUPER, E, exec, foot -e yazi"
+      "SUPER, X, exec, codium"
     ];
 
     shell = [

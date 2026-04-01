@@ -16,7 +16,7 @@
     dnsutils
 
     # Utils
-    neofetch
+    fastfetch
     yq-go
     wget
     file
@@ -24,6 +24,7 @@
     lsof
   ];
 
+  programs.fastfetch.enable = true;
   programs.nix-index-database.comma.enable = true;
   programs.pay-respects.enable = true;
   programs.ripgrep.enable = true;

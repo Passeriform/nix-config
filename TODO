@@ -1,7 +1,4 @@
-Keyboard shortcuts
-  brightness
-  volume
-  mute
+brightness ambxst sync issue
 
 Stream any running video to active console window
 
@@ -15,18 +12,15 @@ Fix bluetooth issue with headphones
 
 Sleep not working / Fix hibernation on closing lid
 
-keyboard backlight
-
 Add DevShell support
 
-Autologin
-
-Change cursor
+Install ghostline cursor theme
 
 Use stylix for unified theming
+  Use fastfetch with png from nixos-icons
 
 Setup stremio and ModernZ with mpv
 
-Update neofetch to use image instead of ascii
-
 Implement custom login greeter to work with Ambxst (greetd + hyprlock)
+
+Unable to launch apps in specified workspace
