@@ -13,6 +13,7 @@
     ./vscode.nix
     ./spotify.nix
     ./discord.nix
+    ./stremio.nix
   ];
 
   programs.direnv = {

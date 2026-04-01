@@ -8,5 +8,6 @@
     "nvidia-settings"
     "discord"
     "spotify"
+    "stremio-linux-shell"
   ]);
 }
