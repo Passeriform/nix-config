@@ -6,6 +6,7 @@
     ./packages
     ./session.nix
     ./fonts.nix
+    ./cursor.nix
     ./utils.nix
   ];
 
