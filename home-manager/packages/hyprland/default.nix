@@ -56,6 +56,10 @@
 
       exec-once = [
         "ambxst > ~/.logs/ambxst.log"
+        "[workspace 2 silent] zen-beta"
+        "[workspace 3 silent] codium"
+        "[workspace 5 silent] vesktop"
+        "[workspace 6 silent] spotify"
       ];
     };
   };
