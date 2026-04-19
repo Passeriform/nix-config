@@ -51,13 +51,14 @@
           ];
         };
 
-        # extensions = {
-        #   force = true;
-        #   packages = with inputs.zen-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
-        #     darkreader
-        #     ublock-origin
-        #   ];
-        # };
+        extensions = {
+          force = true;
+          packages = with inputs.zen-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
+            darkreader
+            ublock-origin
+            ublacklist
+          ];
+        };
 
         search = {
           engines = {
