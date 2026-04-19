@@ -4,6 +4,7 @@
   imports = [
     ./bootloader.nix
     ./graphics.nix
+    ./keyboard.nix
     ./networking.nix
   ];
 

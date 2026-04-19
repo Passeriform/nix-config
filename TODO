@@ -1,5 +1,3 @@
-brightness ambxst sync issue
-
 Stream any running video to active console window
 
 Fix discord background noise issue
@@ -8,19 +6,17 @@ Fix vencord crashing vesktop
 
 Remove regular discord entry from run and rename/re-icon vesktop as discord
 
-Fix bluetooth issue with headphones
+Fix bluetooth mic+headphones issues in discord
 
 Sleep not working / Fix hibernation on closing lid
 
 Add DevShell support
-
-Install ghostline cursor theme
 
 Use stylix for unified theming
   Use fastfetch with png from nixos-icons
 
 Setup stremio and ModernZ with mpv
 
-Implement custom login greeter to work with Ambxst (greetd + hyprlock)
-
 Unable to launch apps in specified workspace
+
+ublock origin on zen

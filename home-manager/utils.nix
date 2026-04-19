@@ -14,14 +14,18 @@
 
     # Networking
     dnsutils
+    iputils
+    unixtools.net-tools
+    wget
 
     # Utils
     fastfetch
-    yq-go
-    wget
     file
-    tree
     lsof
+    tree
+    unixtools.util-linux
+    unixtools.procps
+    yq-go
   ];
 
   programs.fastfetch.enable = true;

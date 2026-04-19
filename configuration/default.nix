@@ -12,10 +12,10 @@
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
- 
+
   users.users."${username}" = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "docker" ];
+    extraGroups = [ "wheel" ];
   };
 
   system.stateVersion = "25.11";

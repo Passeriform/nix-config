@@ -1,11 +1,19 @@
 {
+  username,
   ...
 }: {
-  virtualisation.podman.enable = true;
-  virtualisation.docker.rootless = {
+  hardware.nvidia-container-toolkit.enable = true;
+
+  virtualisation.docker = {
     enable = true;
-    setSocketVariable = true;
+
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+
+    daemon.settings.features.cdi = true;
   };
 
-  hardware.nvidia-container-toolkit.enable = true;
+  users.users."${username}".extraGroups = [ "docker" ];
 }
