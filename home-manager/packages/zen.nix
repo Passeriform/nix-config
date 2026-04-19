@@ -61,15 +61,26 @@
         };
 
         search = {
+          force = true;
           engines = {
+            bing.metaData.hidden = true;
+            ddg.metaData.hidden = true;
+            perplexity.metaData.hidden = true;
+            wikipedia.metaData.hidden = true;
+
+            "GitHub" = {
+              urls = [{ template = "https://github.com/search?q={searchTerms}"; }];
+              icon = "https://github.githubassets.com/favicons/favicon-dark.svg";
+              definedAliases = ["@gh"];
+            };
             "NixOS Packages" = {
               urls = [{ template = "https://search.nixos.org/packages?from=0&size=200&sort=relevance&type=packages&query={searchTerms}"; }];
-              icon = "https://nixos.org/favicon.png";
+              icon = "https://nixos.org/favicon.svg";
               definedAliases = [ "@np" "@nix" ];
             };
             "NixOS Options" = {
               urls = [{ template = "https://search.nixos.org/options?from=0&size=200&sort=relevance&type=packages&query={searchTerms}"; }];
-              icon = "https://nixos.org/favicon.png";
+              icon = "https://nixos.org/favicon.svg";
               definedAliases = [ "@no" ];
             };
           };
