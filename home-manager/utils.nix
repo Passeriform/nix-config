@@ -19,6 +19,7 @@
     wget
 
     # Utils
+    acpica-tools
     fastfetch
     file
     lsof

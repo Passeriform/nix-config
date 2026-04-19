@@ -21,6 +21,8 @@
     "sd_mod"
   ];
 
+  boot.kernelParams = [ "mem_sleep_default=deep" ];
+
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/a0e733bd-c618-4189-9931-4b9e4a32362c";
     fsType = "ext4";
@@ -35,4 +37,6 @@
   swapDevices = [
     { device = "/dev/disk/by-uuid/7cbbe9ea-4371-4de8-8744-42275868ce38"; }
   ];
+
+  boot.resumeDevice = "/dev/disk/by-uuid/7cbbe9ea-4371-4de8-8744-42275868ce38";
 }
