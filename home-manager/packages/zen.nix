@@ -71,17 +71,22 @@
             "GitHub" = {
               urls = [{ template = "https://github.com/search?q={searchTerms}"; }];
               icon = "https://github.githubassets.com/favicons/favicon-dark.svg";
-              definedAliases = ["@gh"];
+              definedAliases = [ "@gh" ];
+            };
+            youtube = {
+              urls = [{ template = "https://www.youtube.com/results?search_query={searchTerms}"; }];
+              icon = "https://www.youtube.com/s/desktop/2c918e63/img/favicon_144x144.png";
+              definedAliases = [ "@yt" ];
             };
             "NixOS Packages" = {
               urls = [{ template = "https://search.nixos.org/packages?from=0&size=200&sort=relevance&type=packages&query={searchTerms}"; }];
               icon = "https://nixos.org/favicon.svg";
-              definedAliases = [ "@np" "@nix" ];
+              definedAliases = [ "@pkg" "@nix" "@hm" ];
             };
             "NixOS Options" = {
               urls = [{ template = "https://search.nixos.org/options?from=0&size=200&sort=relevance&type=packages&query={searchTerms}"; }];
               icon = "https://nixos.org/favicon.svg";
-              definedAliases = [ "@no" ];
+              definedAliases = [ "@opt" ];
             };
           };
         };
