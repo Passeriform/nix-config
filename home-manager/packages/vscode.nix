@@ -50,6 +50,7 @@
           "terminal.integrated.cursorBlinking" = true;
           "terminal.integrated.fontFamily" = "'Iosevka Nerd Font', 'FiraCode Nerd Font'";
           "terminal.integrated.fontLigatures.enabled" = true;
+          "terminal.integrated.scrollback" = 100000;
           "window.titleBarStyle" = "native";
           "window.customTitleBarVisibility" = "never";
           "window.menuBarVisibility" = "hidden";
