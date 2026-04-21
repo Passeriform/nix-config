@@ -7,6 +7,7 @@
     ./hardware-configuration.nix
     ./system
     ./misc
+    ./mounts.nix
     ./session.nix
     ./desktop.nix
   ];

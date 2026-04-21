@@ -4,6 +4,7 @@
 }: {
   imports = [
     ./packages
+    ./mounts.nix
     ./session.nix
     ./fonts.nix
     ./cursor.nix
