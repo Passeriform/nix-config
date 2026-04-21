@@ -6,6 +6,7 @@
     ./packages
     ./mounts.nix
     ./session.nix
+    ./devshell.nix
     ./fonts.nix
     ./cursor.nix
     ./utils.nix
