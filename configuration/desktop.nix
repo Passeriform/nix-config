@@ -13,7 +13,10 @@
   programs.zsh.enable = true;
 
   programs.hyprland.enable = true;
-  programs.ambxst.enable = true;
+  programs.ambxst = {
+    enable = true;
+    fonts.enable = true;
+  };
 
   programs.gpu-screen-recorder.enable = true;
 
