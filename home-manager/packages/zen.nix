@@ -4,7 +4,7 @@
   username,
   ...
 }: {
-  imports = [ inputs.zen-browser.homeModules.default ];
+  imports = [inputs.zen-browser.homeModules.default];
 
   programs.zen-browser = {
     enable = true;
@@ -44,8 +44,14 @@
               name = "Nix";
               toolbar = true;
               bookmarks = [
-                { name = "homepage"; url = "https://nixos.org/"; }
-                { name = "wiki"; url = "https://wiki.nixos.org/"; }
+                {
+                  name = "homepage";
+                  url = "https://nixos.org/";
+                }
+                {
+                  name = "wiki";
+                  url = "https://wiki.nixos.org/";
+                }
               ];
             }
           ];
@@ -69,24 +75,29 @@
             wikipedia.metaData.hidden = true;
 
             "GitHub" = {
-              urls = [{ template = "https://github.com/search?q={searchTerms}"; }];
+              urls = [{template = "https://github.com/search?q={searchTerms}";}];
               icon = "https://github.githubassets.com/favicons/favicon-dark.svg";
-              definedAliases = [ "@gh" ];
+              definedAliases = ["@gh"];
             };
             youtube = {
-              urls = [{ template = "https://www.youtube.com/results?search_query={searchTerms}"; }];
+              urls = [{template = "https://www.youtube.com/results?search_query={searchTerms}";}];
               icon = "https://www.youtube.com/s/desktop/2c918e63/img/favicon_144x144.png";
-              definedAliases = [ "@yt" ];
+              definedAliases = ["@yt"];
             };
             "NixOS Packages" = {
-              urls = [{ template = "https://search.nixos.org/packages?from=0&size=200&sort=relevance&type=packages&query={searchTerms}"; }];
+              urls = [{template = "https://search.nixos.org/packages?channel=25.11&from=0&size=200&sort=relevance&type=packages&query={searchTerms}";}];
               icon = "https://nixos.org/favicon.svg";
-              definedAliases = [ "@pkg" "@nix" "@hm" ];
+              definedAliases = ["@pkg" "@nix"];
             };
             "NixOS Options" = {
-              urls = [{ template = "https://search.nixos.org/options?from=0&size=200&sort=relevance&type=packages&query={searchTerms}"; }];
+              urls = [{template = "https://search.nixos.org/options?channel=25.11&from=0&size=200&sort=relevance&type=packages&query={searchTerms}";}];
               icon = "https://nixos.org/favicon.svg";
-              definedAliases = [ "@opt" ];
+              definedAliases = ["@opt"];
+            };
+            "Home Manager Options" = {
+              urls = [{template = "https://home-manager-options.extranix.com/?release=release-25.11&query={searchTerms}";}];
+              icon = "https://nixos.org/favicon.svg";
+              definedAliases = ["@hm"];
             };
           };
         };
