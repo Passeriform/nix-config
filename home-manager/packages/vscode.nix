@@ -3,7 +3,10 @@
   inputs,
   ...
 }: {
-  home.packages = with pkgs; [ vscodium ];
+  home.packages = with pkgs; [
+    vscodium
+    alejandra
+  ];
 
   programs.vscode = {
     enable = true;
@@ -20,6 +23,7 @@
           redhat.vscode-yaml
 
           # Remove and adopt devshell
+          kamadorueda.alejandra
           jnoortheen.nix-ide
           mkhl.direnv
         ] ++ (with inputs.nix-vscode-extensions.extensions.${pkgs.stdenv.hostPlatform.system}.vscode-marketplace; [
@@ -33,6 +37,7 @@
           "chat.fontFamily" = "'Iosevka Nerd Font', 'FiraCode Nerd Font'";
           "chat.editor.fontFamily" = "'Iosevka Nerd Font', 'FiraCode Nerd Font'";
           "debug.console.fontFamily" = "'Iosevka Nerd Font', 'FiraCode Nerd Font'";
+          "debug.hideSlowPreLaunchWarning" = true;
           "editor.codeLensFontFamily" = "'Iosevka Nerd Font', 'FiraCode Nerd Font'";
           "editor.cursorBlinking" = "phase";
           "editor.cursorSmoothCaretAnimation" = "on";
@@ -41,7 +46,12 @@
           "editor.fontLigatures" = true;
           "editor.inlayHints.fontFamily" = "'Iosevka Nerd Font', 'FiraCode Nerd Font'";
           "editor.inlineSuggest.fontFamily" = "'Iosevka Nerd Font', 'FiraCode Nerd Font'";
-          "git.autoFetch" = true;
+          "editor.integrated.enableMultiLinePasteWarning" = "never";
+          "editor.smoothScrolling" = true;
+          "explorer.confirmDelete" = false;
+          "explorer.confirmDragAndDrop" = false;
+          "explorer.confirmPasteNative" = false;
+          "git.autofetch" = true;
           "git.confirmSync" = false;
           "markdown.preview.fontFamily" = "'Iosevka Nerd Font', 'FiraCode Nerd Font'";
           "notebook.markup.fontFamily" = "'Iosevka Nerd Font', 'FiraCode Nerd Font'";
@@ -51,11 +61,13 @@
           "terminal.integrated.fontFamily" = "'Iosevka Nerd Font', 'FiraCode Nerd Font'";
           "terminal.integrated.fontLigatures.enabled" = true;
           "terminal.integrated.scrollback" = 100000;
+          "terminal.integrated.smoothScrolling" = true;
           "window.titleBarStyle" = "native";
           "window.customTitleBarVisibility" = "never";
           "window.menuBarVisibility" = "hidden";
           "workbench.colorTheme" = "Azir Buddha Vira Carbon";
           "workbench.layoutControl.enabled" = false;
+          "workbench.list.smoothScrolling" = true;
           "workbench.productIconTheme" = "bongocat";
         };
       };
