@@ -38,10 +38,10 @@
     };
 
     nix-vscode-extensions = {
-      url = "github:nix-community/nix-vscode-extensions"; 
+      url = "github:nix-community/nix-vscode-extensions";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
     nixcord.url = "github:FlameFlag/nixcord";
 
     spicetify-nix = {
@@ -67,7 +67,8 @@
         nixos-hardware.nixosModules.asus-rog-strix-g713ie
         ./configuration
         ambxst.nixosModules.default
-        home-manager.nixosModules.home-manager {
+        home-manager.nixosModules.home-manager
+        {
           home-manager.useGlobalPkgs = true;
           home-manager.extraSpecialArgs = {
             inherit inputs;

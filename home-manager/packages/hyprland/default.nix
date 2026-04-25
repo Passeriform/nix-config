@@ -1,16 +1,35 @@
 {
+  config,
   pkgs,
   ...
 }: {
   imports = [
     ./gtk.nix
     ./bindings.nix
+    ../../../modules/ambxst-config.nix
   ];
 
   programs.quickshell = {
     enable = true;
     systemd.enable = true;
   };
+
+  programs.ambxst.configOverrides = {
+    "bar.json" = {
+      pillStyle = "squished";
+      enableFirefoxPlayer = true;
+      showPinButton = false;
+    };
+    "theme.json" = {
+      oledMode = true;
+      font = "Iosevka Nerd Font Mono";
+    };
+  };
+
+  programs.ambxst.wallpaperDirectory = ../../../wallpapers;
+
+  # TODO: Make this configurable through keybinds
+  programs.ambxst.wallpaperSelector = "sunpixels";
 
   wayland.windowManager.hyprland = {
     enable = true;
@@ -25,7 +44,7 @@
         layout = "dwindle";
       };
 
-      monitor = [ "eDP-2,2560x1440@240,0x0,1.25" ];
+      monitor = ["eDP-2,2560x1440@240,0x0,1.25"];
 
       input = {
         numlock_by_default = true;
@@ -34,9 +53,11 @@
 
       decoration = {
         rounding = 8;
+        active_opacity = 0.9;
+        inactive_opacity = 0.8;
         blur = {
           enabled = true;
-          size = 4;
+          size = 10;
           passes = 2;
         };
       };
@@ -66,6 +87,6 @@
 
   xdg.portal = {
     enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+    extraPortals = [pkgs.xdg-desktop-portal-hyprland];
   };
 }
