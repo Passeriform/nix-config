@@ -1,22 +1,23 @@
-Stream any running video to active console window
+New
+  Stream any running video to active console window
+  Add DevShell support
+  Setup stremio and ModernZ with mpv
+  Use stylix for unified theming
+    Use fastfetch with png from nixos-icons
 
-Fix discord background noise issue
+Weird font scaling on Ambxst components
+Variable screen scaling on every boot
 
-Fix vencord crashing vesktop
+Discord
+  Fix mic background noise
+  Fix vencord settings crashing vesktop
+  Fix bluetooth mic+headphones issues
+  Remove regular discord entry from run and rename/re-icon vesktop as discord
 
-Remove regular discord entry from run and rename/re-icon vesktop as discord
+Unfixable for now
+  Unable to launch apps in specified workspace
 
-Fix bluetooth mic+headphones issues in discord
+Fresh install from scratch
+Disko based complete system declarative setup
 
-Sleep not working / Fix hibernation on closing lid
-
-Add DevShell support
-
-Use stylix for unified theming
-  Use fastfetch with png from nixos-icons
-
-Setup stremio and ModernZ with mpv
-
-Unable to launch apps in specified workspace
-
-ublock origin on zen
+Change zen browser shortcuts to minimal ones
