@@ -78,6 +78,9 @@
       CURRENT_WALL="$(${pkgs.findutils}/bin/find "${config.programs.ambxst.wallpaperDirectory}/${config.programs.ambxst.wallpaperSelector}" -type f | ${pkgs.coreutils}/bin/shuf -n 1)"
       [ -f "$CURRENT_WALL" ] || exit 0
 
+      # Remove on fix: https://github.com/Axenide/Ambxst/issues/160
+      pkill -f mpvpaper
+
       ${pkgs.jq}/bin/jq \
         --arg wallPath "${config.programs.ambxst.wallpaperDirectory}/${config.programs.ambxst.wallpaperSelector}" \
         --arg currentWall "$CURRENT_WALL" \
