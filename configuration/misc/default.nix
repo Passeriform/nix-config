@@ -1,6 +1,4 @@
-{
-  ...
-}: {
+_: {
   imports = [
     ./gc.nix
     ./pxe.nix

@@ -1,6 +1,4 @@
-{
-  ...
-}: {
+_: {
   imports = [
     ./bootloader.nix
     ./graphics.nix

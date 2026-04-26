@@ -1,7 +1,4 @@
-{
-  username,
-  ...
-}: {
+{username, ...}: {
   hardware.nvidia-container-toolkit.enable = true;
 
   virtualisation.docker = {
@@ -15,5 +12,5 @@
     daemon.settings.features.cdi = true;
   };
 
-  users.users."${username}".extraGroups = [ "docker" ];
+  users.users."${username}".extraGroups = ["docker"];
 }

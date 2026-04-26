@@ -1,6 +1,5 @@
 {
   pkgs,
-  inputs,
   username,
   ...
 }: {
@@ -9,16 +8,17 @@
     NIXOS_OZONE_WL = "1";
   };
 
-  programs.bash.enable = false;
-  programs.zsh.enable = true;
+  programs = {
+    bash.enable = false;
+    zsh.enable = true;
 
-  programs.hyprland.enable = true;
-  programs.ambxst = {
-    enable = true;
-    fonts.enable = true;
+    gpu-screen-recorder.enable = true;
+    hyprland.enable = true;
+    ambxst = {
+      enable = true;
+      fonts.enable = true;
+    };
   };
-
-  programs.gpu-screen-recorder.enable = true;
 
   users.users."${username}".shell = pkgs.zsh;
 }

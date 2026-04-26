@@ -1,35 +1,34 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./gtk.nix
     ./bindings.nix
     ../../../modules/ambxst-config.nix
   ];
 
-  programs.quickshell = {
-    enable = true;
-    systemd.enable = true;
-  };
-
-  programs.ambxst.configOverrides = {
-    "bar.json" = {
-      pillStyle = "squished";
-      enableFirefoxPlayer = true;
-      showPinButton = false;
+  programs = {
+    quickshell = {
+      enable = true;
+      systemd.enable = true;
     };
-    "theme.json" = {
-      oledMode = true;
-      font = "Iosevka Nerd Font Mono";
+
+    ambxst = {
+      configOverrides = {
+        "bar.json" = {
+          pillStyle = "squished";
+          enableFirefoxPlayer = true;
+          showPinButton = false;
+        };
+        "theme.json" = {
+          oledMode = true;
+          font = "Iosevka Nerd Font Mono";
+        };
+      };
+
+      wallpaperDirectory = ../../../wallpapers;
+      # TODO: Make this configurable through keybinds
+      wallpaperSelector = "sunpixels";
     };
   };
-
-  programs.ambxst.wallpaperDirectory = ../../../wallpapers;
-
-  # TODO: Make this configurable through keybinds
-  programs.ambxst.wallpaperSelector = "sunpixels";
 
   wayland.windowManager.hyprland = {
     enable = true;

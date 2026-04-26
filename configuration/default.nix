@@ -1,7 +1,4 @@
-{
-  username,
-  ...
-}: {
+{username, ...}: {
   imports = [
     ./whitelist.nix
     ./hardware-configuration.nix
@@ -12,11 +9,11 @@
     ./desktop.nix
   ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   users.users."${username}" = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = ["wheel"];
   };
 
   system.stateVersion = "25.11";

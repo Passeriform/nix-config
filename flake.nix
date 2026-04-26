@@ -69,12 +69,14 @@
         ambxst.nixosModules.default
         home-manager.nixosModules.home-manager
         {
-          home-manager.useGlobalPkgs = true;
-          home-manager.extraSpecialArgs = {
-            inherit inputs;
-            username = "utkarsh";
+          home-manager = {
+            useGlobalPkgs = true;
+            extraSpecialArgs = {
+              inherit inputs;
+              username = "utkarsh";
+            };
+            users.utkarsh = import ./home-manager;
           };
-          home-manager.users.utkarsh = import ./home-manager;
         }
       ];
     };

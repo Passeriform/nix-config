@@ -1,9 +1,4 @@
-{
-  pkgs,
-  inputs,
-  username,
-  ...
-}: {
+_: {
   imports = [
     ./git.nix
     ./zsh.nix

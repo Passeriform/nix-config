@@ -1,5 +1,4 @@
 {
-  lib,
   pkgs,
   inputs,
   ...
@@ -8,7 +7,7 @@
 in {
   environment.systemPackages = with pkgs; [
     hyprpolkitagent
-    (sddm-theme.override { flavor = "mocha"; })
+    (sddm-theme.override {flavor = "mocha";})
   ];
 
   security.polkit.enable = true;

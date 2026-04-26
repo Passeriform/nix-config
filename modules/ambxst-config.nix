@@ -3,7 +3,6 @@
   osConfig,
   config,
   pkgs,
-  inputs,
   ...
 }: {
   options.programs.ambxst = lib.mkOption {
@@ -90,45 +89,47 @@
     '';
   in
     lib.mkIf (osConfig.programs.ambxst.enable or false) {
-      systemd.user.services.ambxst-config-patch = {
-        Unit.Description = "Patch Ambxst configs";
+      systemd.user = {
+        services.ambxst-config-patch = {
+          Unit.Description = "Patch Ambxst configs";
 
-        Service = {
-          Type = "oneshot";
-          ExecStart = configPatchScript;
+          Service = {
+            Type = "oneshot";
+            ExecStart = configPatchScript;
+          };
+
+          Install.WantedBy = ["default.target"];
         };
 
-        Install.WantedBy = ["default.target"];
-      };
+        timers.ambxst-config-patch = {
+          Unit.Description = "Timer for ambxst-config-patch";
 
-      systemd.user.timers.ambxst-config-patch = {
-        Unit.Description = "Timer for ambxst-config-patch";
+          Timer = {
+            OnBootSec = "30s";
+            OnUnitActiveSec = "5min";
+          };
 
-        Timer = {
-          OnBootSec = "30s";
-          OnUnitActiveSec = "5min";
+          Install.WantedBy = ["timers.target"];
         };
 
-        Install.WantedBy = ["timers.target"];
-      };
+        services.ambxst-set-wallpaper = {
+          Unit.Description = "Set Ambxst wallpaper";
 
-      systemd.user.services.ambxst-set-wallpaper = {
-        Unit.Description = "Set Ambxst wallpaper";
+          Service = {
+            Type = "oneshot";
+            ExecStart = setWallpaperScript;
+          };
 
-        Service = {
-          Type = "oneshot";
-          ExecStart = setWallpaperScript;
+          Install.WantedBy = ["default.target"];
         };
 
-        Install.WantedBy = ["default.target"];
-      };
+        timers.ambxst-set-wallpaper = {
+          Unit.Description = "Timer for ambxst-set-wallpaper";
 
-      systemd.user.timers.ambxst-set-wallpaper = {
-        Unit.Description = "Timer for ambxst-set-wallpaper";
+          Timer.OnUnitActiveSec = "1min";
 
-        Timer.OnUnitActiveSec = "1min";
-
-        Install.WantedBy = ["timers.target"];
+          Install.WantedBy = ["timers.target"];
+        };
       };
     };
 }

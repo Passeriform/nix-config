@@ -3,7 +3,6 @@
   stdenvNoCC,
   fetchFromGitHub,
 }:
-
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "ghostline-cursor";
   version = "1.1";
@@ -24,6 +23,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     description = "Ghostline Cursor theme";
     homepage = "https://github.com/patinhooh/ghostline-cursor-theme";
     license = lib.licenses.mit;
-    maintainers = with lib.maintainers; [ patinhooh ];
+    maintainers = with lib.maintainers; [patinhooh];
   };
 })

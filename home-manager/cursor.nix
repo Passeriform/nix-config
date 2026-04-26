@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: let 
+{pkgs, ...}: let
   ghostline-cursor-theme = pkgs.callPackage ../packages/ghostline-cursor-theme.nix {};
 in {
   home.pointerCursor = {

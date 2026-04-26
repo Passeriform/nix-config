@@ -1,20 +1,19 @@
-{
-  username,
-  ...
-}: {
-  networking.hostName = "nixos";
+{username, ...}: {
+  networking = {
+    hostName = "nixos";
 
-  networking.wireless.iwd.enable = true;
+    wireless.iwd.enable = true;
 
-  networking.firewall.enable = true;
+    firewall.enable = true;
 
-  networking.networkmanager = {
-    enable = true;
-    wifi.backend = "iwd";
+    networkmanager = {
+      enable = true;
+      wifi.backend = "iwd";
+    };
   };
 
   services.openssh.enable = true;
   services.resolved.enable = true;
 
-  users.users."${username}".extraGroups = [ "networkmanager" ];
+  users.users."${username}".extraGroups = ["networkmanager"];
 }

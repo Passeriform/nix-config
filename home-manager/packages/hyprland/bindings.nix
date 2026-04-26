@@ -1,6 +1,4 @@
-{
-  ...
-}: {
+_: {
   wayland.windowManager.hyprland.settings = let
     navigation = [
       "SUPER, UP, movefocus, u"
@@ -57,7 +55,7 @@
       ", XF86MonBrightnessDown, exec, ambxst brightness -5 -s"
       ", XF86KbdBrightnessUp, exec, brightnessctl -d *::kbd_backlight set 5%+"
       ", XF86KbdBrightnessDown, exec, brightnessctl -d *::kbd_backlight set 5%-"
-    ];    
+    ];
 
     application = [
       "SUPER, Return, exec, foot"

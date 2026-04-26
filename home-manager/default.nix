@@ -1,7 +1,4 @@
-{
-  username,
-  ...
-}: {
+{username, ...}: {
   imports = [
     ./packages
     ./mounts.nix
@@ -13,7 +10,7 @@
   ];
 
   home = {
-    username = username;
+    inherit username;
     homeDirectory = "/home/${username}";
   };
 

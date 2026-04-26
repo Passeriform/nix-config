@@ -2,12 +2,12 @@
   pkgs,
   username,
   ...
-}: { 
-  environment.systemPackages = with pkgs; [ i2c-tools ];
+}: {
+  environment.systemPackages = with pkgs; [i2c-tools];
 
   hardware.i2c.enable = true;
 
-  boot.kernelModules = [ "i2c-dev" "i2c-piix4" ];
+  boot.kernelModules = ["i2c-dev" "i2c-piix4"];
 
   services.hardware.openrgb = {
     enable = true;
@@ -15,5 +15,5 @@
     package = pkgs.openrgb-with-all-plugins;
   };
 
-  users.groups.i2c.members = [ username ];
+  users.groups.i2c.members = [username];
 }

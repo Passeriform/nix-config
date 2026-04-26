@@ -1,8 +1,5 @@
-{
-  inputs,
-  ...
-}: {
-  imports = [ inputs.nixcord.homeModules.default ];
+{inputs, ...}: {
+  imports = [inputs.nixcord.homeModules.default];
 
   programs.nixcord = {
     enable = true;
