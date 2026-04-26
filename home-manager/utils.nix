@@ -22,7 +22,7 @@
     acpica-tools
     fastfetch
     file
-    gtop
+    htop
     lsof
     tree
     unixtools.util-linux

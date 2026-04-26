@@ -3,35 +3,30 @@
   inputs,
   ...
 }: {
-  home.packages = with pkgs; [
-    vscodium
-    alejandra
-  ];
+  home.packages = with pkgs; [vscodium];
 
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
     profiles = {
       default = {
-        extensions = with pkgs.vscode-extensions; [
-          mikestead.dotenv
-          editorconfig.editorconfig
-          streetsidesoftware.code-spell-checker
-          yoavbls.pretty-ts-errors
-          wix.vscode-import-cost
-          gruntfuggly.todo-tree
-          redhat.vscode-yaml
-
-          # Remove and adopt devshell
-          kamadorueda.alejandra
-          jnoortheen.nix-ide
-          mkhl.direnv
-        ] ++ (with inputs.nix-vscode-extensions.extensions.${pkgs.stdenv.hostPlatform.system}.vscode-marketplace; [
-          vitest.explorer
-          pixl-garden.bongocat
-        ]) ++ (with inputs.nix-vscode-extensions.extensions.${pkgs.stdenv.hostPlatform.system}.open-vsx; [
-          azir-11.azir-vscode-theme
-        ]);
+        extensions = with pkgs.vscode-extensions;
+          [
+            mikestead.dotenv
+            editorconfig.editorconfig
+            streetsidesoftware.code-spell-checker
+            yoavbls.pretty-ts-errors
+            wix.vscode-import-cost
+            gruntfuggly.todo-tree
+            redhat.vscode-yaml
+            mkhl.direnv
+          ]
+          ++ (with inputs.nix-vscode-extensions.extensions.${pkgs.stdenv.hostPlatform.system}.vscode-marketplace; [
+            pixl-garden.bongocat
+          ])
+          ++ (with inputs.nix-vscode-extensions.extensions.${pkgs.stdenv.hostPlatform.system}.open-vsx; [
+            azir-11.azir-vscode-theme
+          ]);
 
         userSettings = {
           "chat.fontFamily" = "'Iosevka Nerd Font', 'FiraCode Nerd Font'";

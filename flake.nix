@@ -78,5 +78,26 @@
         }
       ];
     };
+
+    devShells.x86_64-linux.default = let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {inherit system;};
+      extensions = with pkgs.vscode-extensions; [
+        kamadorueda.alejandra
+        jnoortheen.nix-ide
+      ];
+    in
+      pkgs.mkShell {
+        packages = with pkgs; [
+          alejandra
+          statix
+          deadnix
+          nil
+          (vscode-with-extensions.override {
+            vscode = pkgs.vscodium;
+            vscodeExtensions = extensions;
+          })
+        ];
+      };
   };
 }
